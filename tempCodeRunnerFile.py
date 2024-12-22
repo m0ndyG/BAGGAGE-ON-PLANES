@@ -53,6 +53,7 @@ data = [
     {"owner": "1234 567890", "number": "BAG-001", "size": "Средний", "desc": "Чемодан",
      "dep_route": "Москва - Санкт-Петербург", "arr_route": "Санкт-Петербург - Москва",
      "status": "Зарегистрирован", "dep_date": "2024-07-15", "arr_date": "2024-07-16"},
+    # ... другие тестовые данные
 ]
 
 # Класс формы "Создать запись"
@@ -64,7 +65,7 @@ class CreateRecordForm(QDialog):
 
         main_layout = QGridLayout(self)
 
-        # Левая колонка 
+        # Левая колонка (теперь QGridLayout)
         left_layout = QGridLayout()
         left_layout.addWidget(QLabel("Владелец багажа:"), 0, 0)
         self.owner_edit = LineEdit(self)
@@ -98,7 +99,7 @@ class CreateRecordForm(QDialog):
         left_layout.addWidget(self.aircraft_combo, 6, 1)
         left_layout.addItem(QSpacerItem(20, 20, QSizePolicy.Minimum, QSizePolicy.Expanding), 7, 0, 1, 2)
 
-        # Правая колонка 
+        # Правая колонка (теперь QGridLayout)
         right_layout = QGridLayout()
         right_layout.addWidget(QLabel("Маршрут отправления:"), 0, 0)
         self.dep_route_edit = LineEdit(self)
