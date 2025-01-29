@@ -1,0 +1,4 @@
+PyQt5==5.15.9
+qfluentwidgets==1.5.0
+PyMySQL==1.0.3
+bcrypt==4.0.1
